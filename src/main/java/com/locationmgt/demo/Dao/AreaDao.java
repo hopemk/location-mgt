@@ -6,7 +6,7 @@
 package com.locationmgt.demo.Dao;
 
 import com.locationmgt.demo.entity.Shop;
-import java.awt.geom.Area;
+import com.locationmgt.demo.entity.Area;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

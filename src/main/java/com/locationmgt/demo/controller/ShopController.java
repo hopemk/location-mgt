@@ -32,8 +32,9 @@ public class ShopController {
     }
     
     @GetMapping("shop/findallbyarea")
-    public List<Shop> findAllShopsByShopId(@RequestParam Long shopId){
-        List<Shop> response = shopService.findAllShopsByAreaId(shopId);
+    public List<Shop> findAllShopsByShopId(@RequestParam(name="shopId") String shopId){
+        long id = Long.valueOf(shopId);
+        List<Shop> response = shopService.findAllShopsByAreaId(id);
         return response;
     }
 }
