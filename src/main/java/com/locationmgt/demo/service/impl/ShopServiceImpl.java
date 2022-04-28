@@ -10,6 +10,7 @@ import com.locationmgt.demo.Dao.ShopDao;
 import com.locationmgt.demo.dto.ShopDto;
 import com.locationmgt.demo.entity.Shop;
 import com.locationmgt.demo.service.ShopService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +36,12 @@ public class ShopServiceImpl implements ShopService{
         shop.setDateCreated(new LocalDate());
         
         return "success";
+    }
+
+    @Override
+    public List<Shop> findAllShopsByAreaId(Long id) {
+        return shopDao.findAllByShopId();
+        
     }
     
 }
