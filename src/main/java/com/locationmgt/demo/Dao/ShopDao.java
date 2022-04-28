@@ -6,6 +6,7 @@
 package com.locationmgt.demo.Dao;
 
 import com.locationmgt.demo.entity.Shop;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,5 +16,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ShopDao extends JpaRepository<Shop, Long>{
+
+    public List<Shop> findAllByShopId(Long Id);
+
+    public List<Shop> findByShopId(Long id);
     
 }

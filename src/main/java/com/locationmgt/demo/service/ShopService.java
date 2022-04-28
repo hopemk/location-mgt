@@ -6,6 +6,8 @@
 package com.locationmgt.demo.service;
 
 import com.locationmgt.demo.dto.ShopDto;
+import com.locationmgt.demo.entity.Shop;
+import java.util.List;
 
 /**
  *
@@ -15,5 +17,7 @@ import com.locationmgt.demo.dto.ShopDto;
 public interface ShopService {
     
     String saveShop(ShopDto shopDto);
+    
+    List<Shop> findAllShopsByAreaId(Long id);
     
 }

@@ -16,9 +16,8 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @AllArgsConstructor
-
+@NoArgsConstructor
 public class ShopDto {
-    private long shopId;
     private long areaId;
     private String name;
     private String address;
