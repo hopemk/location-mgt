@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Shop {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long shopId;
@@ -38,5 +38,6 @@ public class Shop {
     @Column(unique=true)
     private String name;
     private String address;
+    
     private LocalDate dateCreated;
 }
